@@ -61,6 +61,12 @@ public class FileOperations {
 		else {
 			System.out.println("File is not avilable "+file.getName());
 		}
-
+	}
+	public void deleteFile(File file){
+		if(file.exists() && file.delete()){
+			System.out.println(file.getName()+" file has been deleted from "+file.getAbsolutePath());
+		}else {
+			System.out.println("File is not present");
+		}
 	}
 }
