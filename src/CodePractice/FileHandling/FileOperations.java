@@ -1,8 +1,10 @@
 package CodePractice.FileHandling;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.Scanner;
 
 public class FileOperations {
 	public FileOperations(){
@@ -37,5 +39,28 @@ public class FileOperations {
 		else {
 			System.out.println("File is not present in the directory");
 		}
+	}
+
+	/*
+	This method is used to read a content from the file
+	* */
+	public void readFile(File file){
+		if(file.exists() && file.isFile()){
+			try {
+				Scanner sc =new Scanner(file);
+				while (sc.hasNextLine()){
+					String lines=sc.nextLine();
+					System.out.println("Reading a file "+file.getName());
+					System.out.println("\n"+lines);
+				}
+				sc.close();
+			} catch (FileNotFoundException e) {
+				System.out.println("Error occured while reading the file "+e.getStackTrace());
+			}
+		}
+		else {
+			System.out.println("File is not avilable "+file.getName());
+		}
+
 	}
 }
