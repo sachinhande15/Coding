@@ -8,7 +8,7 @@ public class ArraySort {
 	}
 
 	public static int [] sortArray(int[] array){
-		int temp=0;
+		int temp;
 		if(array.length!=0){
 			for(int i=0;i< array.length;i++){
 				for (int j=i+1; j< array.length;j++){

@@ -1,8 +1,10 @@
 package CodePractice.ArrayLearning;
 
+import java.util.Arrays;
+
 public class ArrayReverse {
 	public static void main(String args[]){
-		reverseArray(new int[]{12,24,56,78});
+		System.out.println(Arrays.toString(reverseArray(new int[]{192,24,56,78})));
 	}
 	// Reverse a given array
 	public static int [] reverseArray(int [] array){
